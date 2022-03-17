@@ -18,10 +18,9 @@ class ProductRepositoryTest {
     private ProductRepository productRepository;
 
     @Test
-    public void shouldAddNewProduct(){
-        final Product product = new Product(1L,"lorem",1L,2L);
+    public void shouldAddNewProduct() {
+        final Product product = new Product(1L, "lorem", 1L, 2L);
         final Product expected = productRepository.save(product);
         assertThat(expected).isEqualTo(product);
     }
-
 }
